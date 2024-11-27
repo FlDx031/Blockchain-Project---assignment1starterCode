@@ -34,25 +34,8 @@ You will also be provided with a UTXO class that represents an unspent transacti
 Further, you will be provided with a UTXOPool class that represents the current set of outstanding UTXOs and contains a map from each UTXO to its corresponding transaction output. This class contains constructors to create a new empty UTXOPool or a copy of a given UTXOPool, and methods to add and remove UTXOs from the pool, get the output corresponding to a given UTXO, check if a UTXO is in the pool, and get a list of all UTXOs in the pool.
 
 You will be responsible for creating a file called TxHandler.java that implements the following API:
+# see assignment1.pdf
 
-public class TxHandler {
-
-  /** Creates a public ledger whose current UTXOPool 
-    * (collection of unspent transaction outputs) is utxoPool. 
-    * This should  make a defensive copy of utxoPool by using 
-    * the UTXOPool (UTXOPool uPool) constructor.
-    */
-  public TxHandler(UTXOPool utxoPool);
-
-  /** Returns true if
-…   * proposed transactions, checking each transaction for 
-   * correctness, returning a mutually valid array of accepted 
-   * transactions, and updating the current UTXO pool as 
-   * appropriate.
-   */
-  public Transaction[] handleTxs(Transaction[] possibleTxs);
-
-}
 Your implementation of handleTxs() should return a mutually valid transaction set of maximal size (one that can’t be enlarged simply by adding more transactions). It need not compute a set of maximum size (one for which there is no larger mutually valid transaction set).
 
 Based on the transactions it has chosen to accept, handleTxs() should also update its internal UTXOPool to reflect the current set of unspent transaction outputs, so that future calls to handleTxs() and isValidTx() are able to correctly process/validate transactions that claim outputs from transactions that were accepted in a previous call to handleTxs().
