@@ -1,4 +1,4 @@
-# Blockchain-Project---assignment1starterCode
+# Blockchain-Project: Understanding Bitcoin
 
 First assignment for Bitcoin and Cryptocurrency Technologies MOOC proposed by Princeton University. 
 
